@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, sans-serif;
+  background: #f5f5f5;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  padding: 40px 0 70px;
+}
+
+header img {
+  width: 100px;
+}
+
+header p {
+  margin: 5px 0 15px;
+  font-size: 14px;
+  letter-spacing: -0.5px;
+  color: #888;
+}
+
+header h1 {
+  font-size: 33px;
+  letter-spacing: -1px;
+  color: #333;
+}
+
+footer {
+  padding: 30px 20px;
+  margin-top: auto;
+  background: #fff;
+}
+
+footer p {
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: -0.5px;
+  color: #aaa;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px 80px;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-gap: 20px;
+  position: relative;
+}
+
+.section + .section {
+  margin-top: 80px;
+}
+
+.section h2 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  top: -45px;
+  position: absolute;
+}
+
+.box {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 5px;
+  border-radius: 8px;
+  padding: 20px 28px;
+  background: #fefefe;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.box:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px;
+}
+
+dt {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+dd + dt {
+  margin-top: 20px;
+}
+
+dd + dd {
+  margin-top: 5px;
+}
+
+dd {
+  font-size: 17px;
+  line-height: 1.35;
+}
+
+dd a {
+  color: #000;
+  cursor: pointer;
+}
+
+dd a:visited {
+  color: #999;
+}
+
+.revised a {
+  color: #e40000 !important;
+}
+
+.bold a {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding-bottom: 50px;
+  }
+  header h1 {
+    font-size: 28px;
+  }
+  .section {
+    grid-template-columns: 1fr 1fr;
+  }
+  .box {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .container {
+    margin: 0;
+  }
+  .box {
+    padding: 20px 15px;
+  }
+  dt {
+    font-size: 18px;
+  }
+  dd {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .section {
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+  }
+}
