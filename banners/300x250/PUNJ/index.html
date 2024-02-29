@@ -1,7 +1,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="ad.size" content="width=728,height=90" />
+    <meta name="ad.size" content="width=300,height=250" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.18.0_499ba64a23378545748ff12d372e59e9_min.js"></script>
@@ -11,18 +11,17 @@
         window.open(window.clickTag);
       }
     </script>
-    <title>Koodo 728x90 TC</title>
+    <title>Koodo 300x250 PUNJ</title>
   </head>
   <body>
     <div id="ad">
       <div id="banner">
         <a id="clickarea" href="javascript:exit()">
           <span class="abs copy1 sprite"></span> <span class="abs copy2 sprite"></span>
-          <span class="abs sprite sticker"></span> <span class="abs lockup sprite"></span>
+          <span class="abs lockup sprite"></span> <span class="abs sprite sticker"></span>
           <span class="abs cta sprite"></span> <span class="abs logo sprite"></span>
-          <svg class="abs cut leftBg"><polygon points="0,90 0,0 34,0 34,90"></polygon></svg>
-          <svg class="abs bg cut"><polygon points="0,90 0,0 1456,0 1456,90"></polygon></svg>
-          <svg class="abs cut fg"><polygon points="0,90 0,0 1456,0 1456,90"></polygon></svg>
+          <svg class="abs bg cut"><polygon points="300,0 0,0 0,600 300,600"></polygon></svg>
+          <svg class="abs cut fg"><polygon points="300,0 0,0 0,600 300,600"></polygon></svg>
         </a>
       </div>
     </div>
@@ -142,7 +141,7 @@
             },
             {},
           ],
-          osZg: [
+          UotE: [
             function (require, module, exports) {
               'use strict';
               var _utils = require('@campj/banners/utils'),
@@ -176,13 +175,22 @@
                     a = new TimelineMax({ paused: !0 });
                   a
                     .delay(0.15)
-                    .to(e.fg, 0.6, { x: 0, ease: 'easeOutCirc' })
-                    .to(e.bg, 0.6, { x: 0, ease: 'easeOutCirc' }, '-=0.3')
-                    .to(e.leftBg, 0.6, { x: 0, ease: 'easeOutCirc' }, '-=0.5')
-                    .from(e.logo, 0.4, { autoAlpha: 0, x: '20px', ease: 'easeOutExpo' }, '-=0.3')
-                    .from(e.copy1, 0.6, { autoAlpha: 0, x: '-40px', ease: 'easeOutExpo' }, '-=0.3')
+                    .to(e.fg, 0.6, { y: 0, ease: 'easeOutCirc' })
+                    .to(e.bg, 0.6, { y: 0, ease: 'easeOutCirc' }, '-=0.3')
+                    .from(
+                      e.logo,
+                      0.4,
+                      { autoAlpha: 0, x: 0, y: '10px', ease: 'easeOutExpo' },
+                      '-=0.3'
+                    )
+                    .from(
+                      e.copy1,
+                      0.6,
+                      { autoAlpha: 0, x: 0, y: '30px', ease: 'easeOutExpo' },
+                      '-=0.3'
+                    )
                     .from(e.sticker, 0.6, { autoAlpha: 0, scale: 0, ease: 'easeOutBack' }, '-=0.6')
-                    .from(e.lockup, 0.6, { autoAlpha: 0, x: '40px', ease: 'easeOutExpo' }, '-=0.3')
+                    .from(e.lockup, 0.6, { autoAlpha: 0, x: '30px', ease: 'easeOutExpo' })
                     .addLabel('readTimeDelay', readTimeValue)
                     .to(
                       [e.copy1, e.sticker],
@@ -205,7 +213,7 @@
           ],
         },
         {},
-        ['osZg'],
+        ['UotE'],
         null
       );
     </script>

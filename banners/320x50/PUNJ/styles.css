@@ -12,8 +12,8 @@ body {
 #ad {
   display: block;
   overflow: hidden;
-  width: 300px;
-  height: 250px;
+  width: 320px;
+  height: 50px;
   border: 1px solid #000;
   background-color: #6c827b;
   position: relative;
@@ -26,7 +26,6 @@ body {
   height: 100%;
   z-index: 100;
 }
-
 #ad,
 #ad * {
   box-sizing: border-box;
@@ -121,80 +120,84 @@ figure {
   -ms-interpolation-mode: nearest-neighbor;
 }
 .sprite.copy1 {
-  display: block;
-  width: 220px;
-  height: 102px;
+  width: 155px;
+  height: 29px;
   background-position: 0 0;
-  background-size: 469px 215px;
-  top: 25px;
-  left: 20px;
+  top: 8px;
+}
+.sprite.copy1,
+.sprite.copy2 {
+  display: block;
+  background-size: 155px 125px;
+  left: 10px;
 }
 .sprite.copy2 {
-  width: 248px;
-  height: 87px;
-  background-position: -221px 0;
+  width: 113px;
+  height: 42px;
+  background-position: 0 -29px;
+  top: 3px;
+}
+.sprite.cta {
+  width: 43px;
+  height: 14px;
+  background-position: -111px -94px;
   top: 32px;
+  left: 139px;
 }
-.sprite.copy2,
-.sprite.cta {
+.sprite.cta,
+.sprite.lockup {
   display: block;
-  background-size: 469px 215px;
-  left: 21px;
-}
-.sprite.cta {
-  width: 85px;
-  height: 18px;
-  background-position: -335px -103px;
-  top: 137px;
+  background-size: 155px 125px;
 }
 .sprite.lockup {
-  width: 132px;
-  height: 112px;
-  background-position: 0 -103px;
-  top: 130px;
-  left: 159px;
-}
-.sprite.lockup,
-.sprite.logo {
-  display: block;
-  background-size: 469px 215px;
+  width: 57px;
+  height: 54px;
+  background-position: 0 -71px;
+  top: -2px;
+  left: 183px;
 }
 .sprite.logo {
-  width: 79px;
-  height: 30px;
-  background-position: -256px -103px;
-  top: 207px;
-  left: 21px;
+  width: 58px;
+  height: 22px;
+  background-position: -58px -71px;
+  top: 14px;
+  left: 251px;
 }
+.sprite.logo,
 .sprite.sticker {
   display: block;
-  width: 122px;
-  height: 48px;
-  background-position: -133px -103px;
-  background-size: 469px 215px;
-  top: 95px;
-  left: 16px;
+  background-size: 155px 125px;
+}
+.sprite.sticker {
+  width: 52px;
+  height: 21px;
+  background-position: -58px -94px;
+  top: 23px;
+  left: 37px;
 }
 .cut {
-  left: 0;
-  width: 100%;
-  height: 200%;
-  transform: translate3d(0, -75%, 0);
+  width: 200%;
+  transform: translate3d(-50%, 0, 0);
   will-change: transform;
+}
+.cut,
+.cut svg {
+  top: 0;
+  height: 100%;
 }
 .cut svg {
   position: absolute;
   display: block;
-  top: 0;
+  width: 100%;
   left: 0;
 }
 .cut.bg {
   fill: #a0ed00;
-  top: 173px;
+  left: 220px;
 }
 .cut.fg {
   fill: #6f46f1;
-  top: 193px;
+  left: 240px;
 }
 .disclaimer {
   border: none;

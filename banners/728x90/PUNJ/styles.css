@@ -122,9 +122,9 @@ figure {
 }
 .sprite.copy1 {
   width: 309px;
-  height: 60px;
+  height: 57px;
   background-position: 0 0;
-  top: 15px;
+  top: 14px;
   left: 61px;
 }
 .sprite.copy1,
@@ -134,16 +134,16 @@ figure {
 }
 .sprite.copy2 {
   width: 199px;
-  height: 69px;
-  background-position: 0 -61px;
-  top: 11px;
+  height: 72px;
+  background-position: 0 -58px;
+  top: 7px;
   left: 58px;
 }
 .sprite.cta {
   width: 85px;
-  height: 18px;
+  height: 23px;
   background-position: -200px -104px;
-  top: 61px;
+  top: 58px;
   left: 392px;
 }
 .sprite.cta,
@@ -174,8 +174,8 @@ figure {
   width: 105px;
   height: 42px;
   background-position: -200px -61px;
-  top: 43px;
-  left: 112px;
+  top: 40px;
+  left: 113px;
 }
 .cut {
   width: 200%;
