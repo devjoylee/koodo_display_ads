@@ -1,0 +1,256 @@
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#ad {
+  display: block;
+  overflow: hidden;
+  width: 300px;
+  height: 250px;
+  border: 1px solid #000;
+  background-color: #6c827b;
+  position: relative;
+  cursor: pointer;
+}
+
+#banner,
+.frame {
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+#ad,
+#ad * {
+  box-sizing: border-box;
+}
+.abs,
+.visually-hidden {
+  position: absolute;
+}
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 1px;
+}
+figure {
+  margin: 0;
+  padding: 0;
+}
+.sprite.visible,
+.visible {
+  visibility: visible;
+}
+.hidden,
+.sprite.hidden {
+  visibility: hidden;
+}
+.frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.nocrisp {
+  image-rendering: auto !important;
+  -ms-interpolation-mode: unset;
+}
+#banner-frame {
+  position: absolute;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  top: 0;
+  left: 0;
+  border: 1px solid #000;
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+}
+#ad,
+#banner,
+#clickarea {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+#banner,
+#clickarea {
+  width: 100%;
+  height: 100%;
+}
+#ad {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background: #ff0075;
+}
+.copy1,
+.copy2a,
+.cta,
+.logo {
+  z-index: 1;
+}
+.disclaimer,
+.lockup,
+.sticker {
+  z-index: 2;
+}
+.sprite {
+  background: url(assets/sprites.png) no-repeat 0 0;
+  backface-visibility: hidden;
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  -ms-interpolation-mode: nearest-neighbor;
+
+  display: block;
+  background-size: 500px 250px;
+  z-index: 10;
+}
+.sprite.copy1 {
+  width: 195px;
+  height: 95px;
+  background-position: 0 0;
+  top: 25px;
+  right: 20px;
+}
+.sprite.copy2a {
+  width: 260px;
+  height: 60px;
+  background-position: -235px 0;
+  top: 15px;
+  right: 20px;
+}
+.sprite.copy2b {
+  width: 150px;
+  height: 140px;
+  background-position: -350px -92px;
+  top: 83px;
+  right: 17px;
+}
+.sprite.copy3 {
+  width: 206px;
+  height: 70px;
+  background-position: -110px -92px;
+  top: 35px;
+  right: 15px;
+}
+.sprite.lockup {
+  width: 120px;
+  height: 115px;
+  background-position: 0 -135px;
+  top: 123px;
+  left: 13px;
+}
+.sprite.logo {
+  width: 80px;
+  height: 35px;
+  background-position: -120px -175px;
+  top: 203px;
+  right: 15px;
+}
+.sprite.sticker {
+  width: 80px;
+  height: 35px;
+  background-position: -420px -58px;
+  top: 45px;
+  right: 76px;
+}
+.sprite.cta {
+  width: 80px;
+  height: 25px;
+  background-position: -115px -225px;
+  bottom: 110px;
+  right: 15px;
+}
+.cut {
+  left: 0;
+  width: 100%;
+  height: 200%;
+  transform: translate3d(0, -75%, 0);
+  will-change: transform;
+}
+.cut svg {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+}
+.cut.bg {
+  fill: #ffad00;
+  top: 162px;
+}
+.cut.fg {
+  fill: #7a3dfc;
+  top: 195px;
+}
+.disclaimer {
+  border: none;
+}
+#legal,
+.disclaimer:focus {
+  outline: none;
+}
+#legal {
+  overflow: visible;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 10px;
+  font-family: Arial;
+  text-align: left;
+  width: calc(100% - 24px);
+  min-height: 30px;
+  opacity: 0;
+  visibility: hidden;
+  font-family: HelveticaNeueCondensed, HelveticaNeue-Condensed, Helvetica Neue Condensed,
+    HelveticaNeueRomanCondensed, HelveticaNeue-Roman-Condensed, Helvetica Neue Roman Condensed,
+    HelveticaNeue, Helvetica Neue, HelveticaNeueRoman, HelveticaNeue-Roman, Helvetica Neue Roman,
+    Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  color: #000;
+  right: 10px;
+  bottom: 20px;
+}
+#legal:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: #fff transparent transparent;
+  border-style: solid;
+  border-width: 6px 5px 0;
+  bottom: -6px;
+  left: 10px;
+}
+
+img {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-touch-callout: none;
+}
