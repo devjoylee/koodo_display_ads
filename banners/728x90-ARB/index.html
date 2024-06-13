@@ -141,7 +141,7 @@
           ],
           Bfnc: [
             function (require, module, exports) {
-              module.exports = { readTime: { short: '+=1.5', medium: '+=2', long: '+=2' } };
+              module.exports = { readTime: { short: '+=1.5', medium: '+=2', long: '+=3' } };
             },
             {},
           ],
@@ -155,7 +155,10 @@
               function _interopRequireDefault(e) {
                 return e && e.__esModule ? e : { default: e };
               }
-              var readTimeValue = _allBannerSettings.default.readTime.medium,
+              var readTimeValue = {
+                  medium: _allBannerSettings.default.readTime.medium,
+                  long: _allBannerSettings.default.readTime.long,
+                },
                 events = function () {
                   var e = document.querySelector('.disclaimer');
                   e.addEventListener('click', showLegals),
@@ -174,7 +177,7 @@
                     .from(e.copy1, 0.6, { autoAlpha: 0, x: '-40px', ease: 'easeOutExpo' }, '-=0.3')
                     .from(e.sticker, 0.6, { autoAlpha: 0, scale: 0, ease: 'easeOutBack' }, '-=0.6')
                     .from(e.lockup, 0.6, { autoAlpha: 0, x: '40px', ease: 'easeOutExpo' }, '-=0.3')
-                    .addLabel('readTimeDelay', readTimeValue)
+                    .addLabel('readTimeDelay', readTimeValue.medium)
                     .to(
                       [e.copy1, e.sticker],
                       0.6,
@@ -193,7 +196,7 @@
                       { autoAlpha: 0, x: 0, y: '30px', ease: 'easeOutExpo' },
                       '-=0.3'
                     )
-                    .addLabel('readTimeDelay', readTimeValue)
+                    .addLabel('readTimeDelay', readTimeValue.long)
                     .to(
                       [e.copy2a, e.copy2b],
                       0.6,
