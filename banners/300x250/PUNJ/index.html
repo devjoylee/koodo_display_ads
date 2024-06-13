@@ -1,0 +1,221 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="ad.size" content="width=300,height=250" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.18.0_499ba64a23378545748ff12d372e59e9_min.js"></script>
+    <script>
+      var clickTag = '';
+      function exit() {
+        window.open(window.clickTag);
+      }
+    </script>
+    <title>Koodo 300x250 PUNJ</title>
+  </head>
+  <body>
+    <div id="ad">
+      <div id="banner">
+        <a id="clickarea" href="javascript:exit()">
+          <span class="abs copy1 sprite"></span> <span class="abs copy2 sprite"></span>
+          <span class="abs lockup sprite"></span> <span class="abs sprite sticker"></span>
+          <span class="abs cta sprite"></span> <span class="abs logo sprite"></span>
+          <svg class="abs bg cut"><polygon points="300,0 0,0 0,600 300,600"></polygon></svg>
+          <svg class="abs cut fg"><polygon points="300,0 0,0 0,600 300,600"></polygon></svg>
+        </a>
+      </div>
+    </div>
+    <figure id="banner-frame"></figure>
+
+    <script>
+      parcelRequire = (function (e, r, t, n) {
+        var i,
+          o = 'function' == typeof parcelRequire && parcelRequire,
+          u = 'function' == typeof require && require;
+        function f(t, n) {
+          if (!r[t]) {
+            if (!e[t]) {
+              var i = 'function' == typeof parcelRequire && parcelRequire;
+              if (!n && i) return i(t, !0);
+              if (o) return o(t, !0);
+              if (u && 'string' == typeof t) return u(t);
+              var c = new Error("Cannot find module '" + t + "'");
+              throw ((c.code = 'MODULE_NOT_FOUND'), c);
+            }
+            (p.resolve = function (r) {
+              return e[t][1][r] || r;
+            }),
+              (p.cache = {});
+            var l = (r[t] = new f.Module(t));
+            e[t][0].call(l.exports, p, l, l.exports, this);
+          }
+          return r[t].exports;
+          function p(e) {
+            return f(p.resolve(e));
+          }
+        }
+        (f.isParcelRequire = !0),
+          (f.Module = function (e) {
+            (this.id = e), (this.bundle = f), (this.exports = {});
+          }),
+          (f.modules = e),
+          (f.cache = r),
+          (f.parent = o),
+          (f.register = function (r, t) {
+            e[r] = [
+              function (e, r) {
+                r.exports = t;
+              },
+              {},
+            ];
+          });
+        for (var c = 0; c < t.length; c++)
+          try {
+            f(t[c]);
+          } catch (e) {
+            i || (i = e);
+          }
+        if (t.length) {
+          var l = f(t[t.length - 1]);
+          'object' == typeof exports && 'undefined' != typeof module
+            ? (module.exports = l)
+            : 'function' == typeof define && define.amd
+            ? define(function () {
+                return l;
+              })
+            : n && (this[n] = l);
+        }
+        if (((parcelRequire = f), i)) throw i;
+        return f;
+      })(
+        {
+          bWpy: [
+            function (require, module, exports) {
+              var bannerElements = {};
+              function domReady(e) {
+                'undefined' !== document.readyState
+                  ? document.addEventListener('readystatechange', function t() {
+                      ('interactive' !== document.readyState &&
+                        'complete' !== document.readyState) ||
+                        (document.removeEventListener('readystatechange', t), e());
+                    })
+                  : document.addEventListener('DOMContentLoaded', e);
+              }
+              function getElements(e) {
+                void 0 === e && (e = '.sprite');
+                for (
+                  var t = bannerElements,
+                    n = Array.prototype.slice.call(document.querySelectorAll(e)),
+                    r = 0;
+                  r < n.length;
+                  r++
+                )
+                  for (
+                    var a = n[r], o = Array.prototype.slice.call(a.classList), d = 0;
+                    d < o.length;
+                    d++
+                  ) {
+                    var l = o[d];
+                    t[l] || (t[l] = [a]), t[l].push(a);
+                  }
+                for (var c = Object.keys(t), m = 0; m < c.length; m++) {
+                  var s = c[m];
+                  1 === t[s].length && (t[s] = t[s][0]);
+                }
+                return t;
+              }
+              function getElement(e) {
+                return bannerElements[e];
+              }
+              module.exports = {
+                domReady: domReady,
+                getElements: getElements,
+                getElement: getElement,
+              };
+            },
+            {},
+          ],
+          Bfnc: [
+            function (require, module, exports) {
+              module.exports = { readTime: { short: '+=1.5', medium: '+=2', long: '+=2' } };
+            },
+            {},
+          ],
+          UotE: [
+            function (require, module, exports) {
+              'use strict';
+              var _utils = require('@campj/banners/utils'),
+                _allBannerSettings = _interopRequireDefault(
+                  require('../../_global/allBannerSettings')
+                );
+              function _interopRequireDefault(e) {
+                return e && e.__esModule ? e : { default: e };
+              }
+              var readTimeValue = _allBannerSettings.default.readTime.medium,
+                showLegal = document.getElementById('legal'),
+                showLegals = function () {
+                  console.log('showlegals'),
+                    TweenMax.to('#legal', 0.25, { display: 'flex', autoAlpha: 1 }),
+                    setTimeout(function () {
+                      ad.addEventListener('click', hideLegals);
+                    }, 10);
+                },
+                hideLegals = function e() {
+                  ad.removeEventListener('click', e),
+                    TweenMax.to('#legal', 0.25, { display: 'none', autoAlpha: 0 });
+                },
+                events = function () {
+                  var e = document.querySelector('.disclaimer');
+                  e.addEventListener('click', showLegals),
+                    e.addEventListener('mouseover', showLegals),
+                    e.addEventListener('mouseout', hideLegals);
+                },
+                animate = function () {
+                  var e = (0, _utils.getElements)('.sprite, .cut, .legal'),
+                    a = new TimelineMax({ paused: !0 });
+                  a
+                    .delay(0.15)
+                    .to(e.fg, 0.6, { y: 0, ease: 'easeOutCirc' })
+                    .to(e.bg, 0.6, { y: 0, ease: 'easeOutCirc' }, '-=0.3')
+                    .from(
+                      e.logo,
+                      0.4,
+                      { autoAlpha: 0, x: 0, y: '10px', ease: 'easeOutExpo' },
+                      '-=0.3'
+                    )
+                    .from(
+                      e.copy1,
+                      0.6,
+                      { autoAlpha: 0, x: 0, y: '30px', ease: 'easeOutExpo' },
+                      '-=0.3'
+                    )
+                    .from(e.sticker, 0.6, { autoAlpha: 0, scale: 0, ease: 'easeOutBack' }, '-=0.6')
+                    .from(e.lockup, 0.6, { autoAlpha: 0, x: '30px', ease: 'easeOutExpo' })
+                    .addLabel('readTimeDelay', readTimeValue)
+                    .to(
+                      [e.copy1, e.sticker],
+                      0.6,
+                      { autoAlpha: 0, x: 0, y: '30px', ease: 'easeOutExpo' },
+                      'readTimeDelay'
+                    )
+                    .from(
+                      e.copy2,
+                      0.6,
+                      { autoAlpha: 0, x: 0, y: '-30px', ease: 'easeOutExpo' },
+                      '-=0.3'
+                    )
+                    .from(e.cta, 0.6, { autoAlpha: 0, x: 0, y: '30px', ease: 'easeOutExpo' }),
+                    a.play();
+                };
+              (0, _utils.domReady)(animate), showLegal && (0, _utils.domReady)(events);
+            },
+            { '@campj/banners/utils': 'bWpy', '../../_global/allBannerSettings': 'Bfnc' },
+          ],
+        },
+        {},
+        ['UotE'],
+        null
+      );
+    </script>
+  </body>
+</html>

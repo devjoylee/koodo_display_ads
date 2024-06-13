@@ -119,73 +119,62 @@ figure {
   image-rendering: -o-crisp-edges;
   image-rendering: -webkit-optimize-contrast;
   -ms-interpolation-mode: nearest-neighbor;
-
-  display: block;
-  background-size: 500px 400px;
-  z-index: 10;
 }
 .sprite.copy1 {
-  width: 280px;
-  height: 120px;
+  display: block;
+  width: 245px;
+  height: 150px;
   background-position: 0 0;
+  background-size: 500px 310px;
   top: 75px;
   left: 25px;
 }
-.sprite.copy2a {
-  width: 260px;
-  height: 180px;
-  background-position: 0 -120px;
-  top: 25px;
+.sprite.copy2 {
+  width: 255px;
+  height: 148px;
+  background-position: -248px 0;
+  top: 75px;
   left: 25px;
 }
-.sprite.copy2b {
-  width: 185px;
-  height: 85px;
-  background-position: -295px -128px;
-  top: 210px;
-  right: 15px;
-}
-.sprite.copy2c {
-  width: 177px;
-  height: 35px;
-  background-position: -295px -95px;
-  bottom: 140px;
-  right: 15px;
-}
-.sprite.copy3 {
-  width: 260px;
-  height: 90px;
-  background-position: 0 -300px;
-  top: 90px;
-  right: 15px;
+.sprite.copy2,
+.sprite.cta {
+  display: block;
+  background-size: 500px 310px;
 }
 .sprite.cta {
-  width: 100px;
+  width: 108px;
   height: 30px;
-  background-position: -295px -210px;
-  top: 200px;
-  right: 15px;
+  background-position: 0 -250px;
+  top: 280px;
+  left: 27px;
 }
 .sprite.lockup {
   width: 200px;
   height: 170px;
-  background-position: -350px -240px;
-  bottom: 160px;
-  left: 5px;
+  background-position: -305px -147px;
+  bottom: 90px;
+  right: 5px;
+}
+.sprite.lockup,
+.sprite.logo {
+  display: block;
+  background-size: 500px 310px;
 }
 .sprite.logo {
-  width: 115px;
-  height: 45px;
-  background-position: -295px 0;
-  bottom: 48px;
-  right: 25px;
+  width: 113px;
+  height: 43px;
+  background-position: -133px -194px;
+  bottom: 50px;
+  left: 25px;
 }
 .sprite.sticker {
-  width: 115px;
-  height: 50px;
-  background-position: -295px -45px;
-  top: 117px;
-  right: 12px;
+  display: block;
+  width: 134px;
+  height: 60px;
+  background-position: 0 -185px;
+  background-size: 500px 310px;
+  top: 175px;
+  left: 23px;
 }
 .cut {
   left: 0;
@@ -201,11 +190,11 @@ figure {
   left: 0;
 }
 .cut.bg {
-  fill: #ffad00;
+  fill: #a0ed00;
   top: 415px;
 }
 .cut.fg {
-  fill: #7a3dfc;
+  fill: #6f46f1;
   top: 460px;
 }
 .disclaimer {
