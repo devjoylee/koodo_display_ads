@@ -11,17 +11,26 @@
         window.open(window.clickTag);
       }
     </script>
-    <title>Koodo 300x250 PUNJ</title>
+    <title>Koodo 300x250 PUN</title>
   </head>
   <body>
     <div id="ad">
       <div id="banner">
         <a id="clickarea" href="javascript:exit()">
-          <span class="abs copy1 sprite"></span> <span class="abs copy2 sprite"></span>
-          <span class="abs lockup sprite"></span> <span class="abs sprite sticker"></span>
-          <span class="abs cta sprite"></span> <span class="abs logo sprite"></span>
-          <svg class="abs bg cut"><polygon points="300,0 0,0 0,600 300,600"></polygon></svg>
-          <svg class="abs cut fg"><polygon points="300,0 0,0 0,600 300,600"></polygon></svg>
+          <span class="abs copy1 sprite"></span>
+          <span class="abs copy2 sprite"></span>
+          <div class="abs kv">
+            <img src="assets/kv.gif" alt="gif" />
+            <span class="shadow"></span>
+          </div>
+          <span class="abs cta sprite"></span>
+          <span class="abs logo sprite"></span>
+          <svg class="abs bg cut">
+            <polygon points="300,0 0,0 0,600 300,600"></polygon>
+          </svg>
+          <svg class="abs cut fg">
+            <polygon points="300,0 0,0 0,600 300,600"></polygon>
+          </svg>
         </a>
       </div>
     </div>
@@ -171,7 +180,7 @@
                     e.addEventListener('mouseout', hideLegals);
                 },
                 animate = function () {
-                  var e = (0, _utils.getElements)('.sprite, .cut, .legal'),
+                  var e = (0, _utils.getElements)('.sprite, .cut, .legal, .kv'),
                     a = new TimelineMax({ paused: !0 });
                   a
                     .delay(0.15)
@@ -189,11 +198,21 @@
                       { autoAlpha: 0, x: 0, y: '30px', ease: 'easeOutExpo' },
                       '-=0.3'
                     )
-                    .from(e.sticker, 0.6, { autoAlpha: 0, scale: 0, ease: 'easeOutBack' }, '-=0.6')
-                    .from(e.lockup, 0.6, { autoAlpha: 0, x: '30px', ease: 'easeOutExpo' })
+                    .from(
+                      e.kv,
+                      0.6,
+                      {
+                        autoAlpha: 0,
+                        x: 0,
+                        y: '80px',
+                        scale: 0,
+                        ease: 'easeOutExpo',
+                      },
+                      '-=0.3'
+                    )
                     .addLabel('readTimeDelay', readTimeValue)
                     .to(
-                      [e.copy1, e.sticker],
+                      e.copy1,
                       0.6,
                       { autoAlpha: 0, x: 0, y: '30px', ease: 'easeOutExpo' },
                       'readTimeDelay'

@@ -193,9 +193,21 @@
                       '-=0.3'
                     )
                     .from(
-                      [e.copy1, e.kv],
+                      e.copy1,
                       0.6,
                       { autoAlpha: 0, x: 0, y: '30px', ease: 'easeOutExpo' },
+                      '-=0.3'
+                    )
+                    .from(
+                      e.kv,
+                      0.6,
+                      {
+                        autoAlpha: 0,
+                        x: 0,
+                        y: '80px',
+                        scale: 0,
+                        ease: 'easeOutExpo',
+                      },
                       '-=0.3'
                     )
                     .addLabel('readTimeDelay', readTimeValue)
