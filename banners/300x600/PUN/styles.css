@@ -98,7 +98,7 @@ figure {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  background: #ff0075;
+  background: #ffad00;
 }
 .copy1,
 .copy2,
@@ -111,6 +111,30 @@ figure {
 .sticker {
   z-index: 2;
 }
+
+.kv {
+  width: 200px;
+  position: absolute;
+  bottom: 140px;
+  right: 0;
+  z-index: 2;
+}
+
+.kv img {
+  width: 100%;
+}
+
+.kv .shadow {
+  display: block;
+  position: absolute;
+  width: 100px;
+  height: 1px;
+  right: 95px;
+  bottom: 40px;
+  box-shadow: 42px 6px 6px 1px rgba(0, 0, 0, 0.2);
+  transform: rotate(2deg);
+}
+
 .sprite {
   background: url(assets/sprites.png) no-repeat 0 0;
   backface-visibility: hidden;
@@ -122,31 +146,31 @@ figure {
 }
 .sprite.copy1 {
   display: block;
-  width: 245px;
-  height: 150px;
+  width: 255px;
+  height: 125px;
   background-position: 0 0;
-  background-size: 500px 310px;
+  background-size: 300px 310px;
   top: 75px;
-  left: 25px;
+  left: 20px;
 }
 .sprite.copy2 {
   width: 255px;
-  height: 148px;
-  background-position: -248px 0;
-  top: 75px;
-  left: 25px;
+  height: 70px;
+  background-position: 0 -135px;
+  top: 180px;
+  left: 20px;
 }
 .sprite.copy2,
 .sprite.cta {
   display: block;
-  background-size: 500px 310px;
+  background-size: 300px 310px;
 }
 .sprite.cta {
-  width: 108px;
+  width: 110px;
   height: 30px;
-  background-position: 0 -250px;
-  top: 280px;
-  left: 27px;
+  background-position: 0 -215px;
+  top: 265px;
+  left: 20px;
 }
 .sprite.lockup {
   width: 200px;
@@ -158,21 +182,21 @@ figure {
 .sprite.lockup,
 .sprite.logo {
   display: block;
-  background-size: 500px 310px;
+  background-size: 300px 310px;
 }
 .sprite.logo {
-  width: 113px;
-  height: 43px;
-  background-position: -133px -194px;
+  width: 115px;
+  height: 45px;
+  background-position: 0 -250px;
   bottom: 50px;
-  left: 25px;
+  left: 20px;
 }
 .sprite.sticker {
   display: block;
   width: 134px;
   height: 60px;
   background-position: 0 -185px;
-  background-size: 500px 310px;
+  background-size: 300px 310px;
   top: 175px;
   left: 23px;
 }
@@ -190,8 +214,8 @@ figure {
   left: 0;
 }
 .cut.bg {
-  fill: #a0ed00;
-  top: 415px;
+  fill: #ff0075;
+  top: 390px;
 }
 .cut.fg {
   fill: #6f46f1;
