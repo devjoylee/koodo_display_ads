@@ -17,12 +17,23 @@
     <div id="ad">
       <div id="banner">
         <a id="clickarea" href="javascript:exit()">
-          <span class="abs copy1 sprite"></span> <span class="abs copy2 sprite"></span>
-          <span class="abs sprite sticker"></span> <span class="abs lockup sprite"></span>
-          <span class="abs cta sprite"></span> <span class="abs logo sprite"></span>
-          <svg class="abs cut leftBg"><polygon points="0,90 0,0 34,0 34,90"></polygon></svg>
-          <svg class="abs bg cut"><polygon points="0,90 0,0 1456,0 1456,90"></polygon></svg>
-          <svg class="abs cut fg"><polygon points="0,90 0,0 1456,0 1456,90"></polygon></svg>
+          <span class="abs copy1 sprite"></span>
+          <span class="abs copy2 sprite"></span>
+          <span class="abs cta sprite"></span>
+          <span class="abs logo sprite"></span>
+          <div class="abs kv">
+            <img src="assets/kv.gif" alt="gif" />
+            <span class="shadow"></span>
+          </div>
+          <svg class="abs cut leftBg">
+            <polygon points="0,90 0,0 34,0 34,90"></polygon>
+          </svg>
+          <svg class="abs bg cut">
+            <polygon points="0,90 0,0 1456,0 1456,90"></polygon>
+          </svg>
+          <svg class="abs cut fg">
+            <polygon points="0,90 0,0 1456,0 1456,90"></polygon>
+          </svg>
         </a>
       </div>
     </div>
@@ -172,7 +183,7 @@
                     e.addEventListener('mouseout', hideLegals);
                 },
                 animate = function () {
-                  var e = (0, _utils.getElements)('.sprite, .cut, .legal'),
+                  var e = (0, _utils.getElements)('.sprite, .cut, .legal,.kv'),
                     a = new TimelineMax({ paused: !0 });
                   a
                     .delay(0.15)
@@ -181,11 +192,21 @@
                     .to(e.leftBg, 0.6, { x: 0, ease: 'easeOutCirc' }, '-=0.5')
                     .from(e.logo, 0.4, { autoAlpha: 0, x: '20px', ease: 'easeOutExpo' }, '-=0.3')
                     .from(e.copy1, 0.6, { autoAlpha: 0, x: '-40px', ease: 'easeOutExpo' }, '-=0.3')
-                    .from(e.sticker, 0.6, { autoAlpha: 0, scale: 0, ease: 'easeOutBack' }, '-=0.6')
-                    .from(e.lockup, 0.6, { autoAlpha: 0, x: '40px', ease: 'easeOutExpo' }, '-=0.3')
+                    .from(
+                      e.kv,
+                      0.6,
+                      {
+                        autoAlpha: 0,
+                        x: 0,
+                        y: '80px',
+                        scale: 0,
+                        ease: 'easeOutExpo',
+                      },
+                      '-=0.6'
+                    )
                     .addLabel('readTimeDelay', readTimeValue)
                     .to(
-                      [e.copy1, e.sticker],
+                      e.copy1,
                       0.6,
                       { autoAlpha: 0, x: 0, y: '30px', ease: 'easeOutExpo' },
                       'readTimeDelay'
