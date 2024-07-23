@@ -19,16 +19,16 @@
         <a id="clickarea" href="javascript:exit()">
           <span class="abs copy1 sprite"></span>
           <span class="abs copy2 sprite"></span>
-          <div class="abs kv">
-            <img src="assets/kv.gif" alt="gif" />
-            <span class="shadow"></span>
-          </div>
+          <span class="abs copy3 sprite"></span>
+          <span class="abs kv sprite"></span>
           <span class="abs cta sprite"></span>
           <span class="abs logo sprite"></span>
+          <span class="abs legal sprite"></span>
+
           <svg class="abs bg cut">
             <polygon points="300,0 0,0 0,600 300,600"></polygon>
           </svg>
-          <svg class="abs cut fg">
+          <svg class="abs fg cut">
             <polygon points="300,0 0,0 0,600 300,600"></polygon>
           </svg>
         </a>
@@ -161,26 +161,8 @@
                 return e && e.__esModule ? e : { default: e };
               }
               var readTimeValue = _allBannerSettings.default.readTime.medium,
-                showLegal = document.getElementById('legal'),
-                showLegals = function () {
-                  console.log('showlegals'),
-                    TweenMax.to('#legal', 0.25, { display: 'flex', autoAlpha: 1 }),
-                    setTimeout(function () {
-                      ad.addEventListener('click', hideLegals);
-                    }, 10);
-                },
-                hideLegals = function e() {
-                  ad.removeEventListener('click', e),
-                    TweenMax.to('#legal', 0.25, { display: 'none', autoAlpha: 0 });
-                },
-                events = function () {
-                  var e = document.querySelector('.disclaimer');
-                  e.addEventListener('click', showLegals),
-                    e.addEventListener('mouseover', showLegals),
-                    e.addEventListener('mouseout', hideLegals);
-                },
                 animate = function () {
-                  var e = (0, _utils.getElements)('.sprite, .cut, .legal, .kv'),
+                  var e = (0, _utils.getElements)('.sprite, .cut, .kv'),
                     a = new TimelineMax({ paused: !0 });
                   a
                     .delay(0.15)
@@ -204,7 +186,7 @@
                       {
                         autoAlpha: 0,
                         x: 0,
-                        y: '80px',
+                        y: 0,
                         scale: 0,
                         ease: 'easeOutExpo',
                       },
@@ -223,10 +205,24 @@
                       { autoAlpha: 0, x: 0, y: '-30px', ease: 'easeOutExpo' },
                       '-=0.3'
                     )
-                    .from(e.cta, 0.6, { autoAlpha: 0, x: 0, y: '30px', ease: 'easeOutExpo' }),
+                    .addLabel('readTimeDelay', readTimeValue)
+                    .to(
+                      e.copy2,
+                      0.6,
+                      { autoAlpha: 0, x: 0, y: '30px', ease: 'easeOutExpo' },
+                      'readTimeDelay'
+                    )
+                    .from(
+                      e.copy3,
+                      0.6,
+                      { autoAlpha: 0, x: 0, y: '-30px', ease: 'easeOutExpo' },
+                      '-=0.3'
+                    )
+                    .from(e.cta, 0.6, { autoAlpha: 0, x: 0, y: '30px', ease: 'easeOutExpo' })
+                    .from(e.legal, 0.6, { autoAlpha: 0, x: 0, y: 0, ease: 'easeOutExpo' }),
                     a.play();
                 };
-              (0, _utils.domReady)(animate), showLegal && (0, _utils.domReady)(events);
+              (0, _utils.domReady)(animate), (0, _utils.domReady)(events);
             },
             { '@campj/banners/utils': 'bWpy', '../../_global/allBannerSettings': 'Bfnc' },
           ],

@@ -30,18 +30,10 @@ body {
 #ad * {
   box-sizing: border-box;
 }
-.abs,
-.visually-hidden {
+.abs {
   position: absolute;
 }
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  white-space: nowrap;
-  width: 1px;
-}
+
 figure {
   margin: 0;
   padding: 0;
@@ -74,7 +66,6 @@ figure {
   -webkit-box-sizing: border-box;
   top: 0;
   left: 0;
-  border: 1px solid #000;
   width: 100%;
   height: 100%;
   display: block;
@@ -98,40 +89,9 @@ figure {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   background: #ffad00;
+  border: 1px solid #000;
 }
 
-.kv {
-  width: 160px;
-  position: absolute;
-  bottom: 0;
-  right: 10px;
-  z-index: 2;
-}
-
-.kv img {
-  width: 100%;
-}
-
-.kv .shadow {
-  display: block;
-  position: absolute;
-  width: 80px;
-  height: 1px;
-  bottom: 33px;
-  box-shadow: 42px 6px 6px 1px rgba(0, 0, 0, 0.2);
-  transform: rotate(2deg);
-}
-
-.copy1,
-.copy2,
-.cta,
-.logo {
-  z-index: 1;
-}
-.disclaimer,
-.sticker {
-  z-index: 2;
-}
 .sprite {
   background: url(assets/sprites.png) no-repeat 0 0;
   backface-visibility: hidden;
@@ -140,55 +100,64 @@ figure {
   image-rendering: -o-crisp-edges;
   image-rendering: -webkit-optimize-contrast;
   -ms-interpolation-mode: nearest-neighbor;
+  background-size: 375px 300px;
+
+  display: block;
+  z-index: 1;
+}
+
+.copy1,
+.copy2,
+.copy3,
+.cta {
+  left: 25px;
+}
+.sprite.kv {
+  width: 100px;
+  height: 145px;
+  background-position: -250px 0;
+  bottom: 0;
+  right: 0;
 }
 .sprite.copy1 {
-  display: block;
   width: 250px;
-  height: 58px;
+  height: 60px;
   background-position: 0 0;
-  background-size: 469px 215px;
   top: 45px;
-  left: 20px;
 }
 .sprite.copy2 {
-  width: 248px;
+  width: 250px;
   height: 100px;
-  background-position: 0 -60px;
+  background-position: 0 -70px;
   top: 22px;
 }
-.sprite.copy2,
-.sprite.cta {
-  display: block;
-  background-size: 469px 215px;
-  left: 21px;
+.sprite.copy3 {
+  width: 250px;
+  height: 80px;
+  background-position: 0 -180px;
+  top: 22px;
 }
 .sprite.cta {
   width: 85px;
-  height: 18px;
-  background-position: 0 -160px;
-  bottom: 103px;
-}
-
-.sprite.logo {
-  display: block;
-  background-size: 469px 215px;
+  height: 20px;
+  background-position: 0 -260px;
+  bottom: 115px;
 }
 .sprite.logo {
   width: 80px;
   height: 30px;
-  background-position: 0 -185px;
-  bottom: 13px;
-  left: 18px;
+  background-position: -90px -262px;
+  bottom: 15px;
+  left: 20px;
 }
-.sprite.sticker {
-  display: block;
-  width: 122px;
-  height: 48px;
-  background-position: -133px -103px;
-  background-size: 469px 215px;
-  top: 95px;
-  left: 16px;
+.sprite.legal {
+  width: 80px;
+  height: 15px;
+  background-position: -170px -260px;
+  bottom: 5px;
+  left: 25px;
 }
+
 .cut {
   left: 0;
   width: 100%;
@@ -203,7 +172,7 @@ figure {
   left: 0;
 }
 .cut.bg {
-  fill: #ff0075;
+  fill: #a0ed00;
   top: 163px;
 }
 .cut.fg {
@@ -213,45 +182,8 @@ figure {
 .disclaimer {
   border: none;
 }
-#legal,
 .disclaimer:focus {
   outline: none;
-}
-#legal {
-  overflow: visible;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
-  padding: 10px;
-  font-family: Arial;
-  text-align: left;
-  width: calc(100% - 24px);
-  min-height: 30px;
-  opacity: 0;
-  visibility: hidden;
-  font-family: HelveticaNeueCondensed, HelveticaNeue-Condensed, Helvetica Neue Condensed,
-    HelveticaNeueRomanCondensed, HelveticaNeue-Roman-Condensed, Helvetica Neue Roman Condensed,
-    HelveticaNeue, Helvetica Neue, HelveticaNeueRoman, HelveticaNeue-Roman, Helvetica Neue Roman,
-    Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 10px;
-  color: #000;
-  right: 10px;
-  bottom: 20px;
-}
-#legal:after {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-color: #fff transparent transparent;
-  border-style: solid;
-  border-width: 6px 5px 0;
-  bottom: -6px;
-  left: 10px;
 }
 
 img {
