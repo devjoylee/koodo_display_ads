@@ -124,10 +124,11 @@ figure {
   top: 120px;
 }
 .sprite.copy2 {
-  width: 260px;
+  width: 265px;
   height: 155px;
   background-position: 0 -135px;
   top: 100px;
+  left: 20px;
 }
 .sprite.copy3 {
   width: 260px;
