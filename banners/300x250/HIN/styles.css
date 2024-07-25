@@ -106,10 +106,7 @@ figure {
   z-index: 1;
 }
 
-.copy1,
-.copy2,
-.copy3,
-.cta {
+.sprite {
   left: 25px;
 }
 .sprite.kv {
@@ -118,6 +115,7 @@ figure {
   background-position: -250px 0;
   bottom: 0;
   right: 0;
+  left: auto;
 }
 .sprite.copy1 {
   width: 250px;
@@ -155,7 +153,6 @@ figure {
   height: 15px;
   background-position: -170px -260px;
   bottom: 5px;
-  left: 25px;
 }
 
 .cut {
@@ -192,6 +189,5 @@ img {
   -ms-user-select: none;
   user-select: none;
   -webkit-user-drag: none;
-  user-drag: none;
   -webkit-touch-callout: none;
 }

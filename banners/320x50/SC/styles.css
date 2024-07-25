@@ -12,8 +12,8 @@ body {
 #ad {
   display: block;
   overflow: hidden;
-  width: 728px;
-  height: 90px;
+  width: 320px;
+  height: 50px;
   background-color: #6c827b;
   position: relative;
   cursor: pointer;
@@ -100,61 +100,60 @@ figure {
   image-rendering: -o-crisp-edges;
   image-rendering: -webkit-optimize-contrast;
   -ms-interpolation-mode: nearest-neighbor;
-  background-size: 530px 300px;
-
+  background-size: 260px 155px;
   display: block;
   z-index: 1;
 }
 
 .sprite.kv {
-  width: 115px;
-  height: 101px;
-  background-position: -425px 0;
-  bottom: 0;
-  right: 156px;
+  width: 53px;
+  height: 47px;
+  background-position: -210px -31px;
+  top: 0;
+  right: 60px;
 }
 
 .sprite.copy1 {
-  width: 390px;
-  height: 70px;
+  width: 183px;
+  height: 40px;
   background-position: 0 0;
-  top: 23px;
-  left: 60px;
+  top: 14px;
+  left: 20px;
 }
 .sprite.copy2 {
-  width: 420px;
-  height: 70px;
-  background-position: 0 -90px;
-  top: 15px;
-  left: 50px;
+  width: 195px;
+  height: 43px;
+  background-position: 0 -43px;
+  top: 7px;
+  left: 15px;
 }
 .sprite.copy3 {
-  width: 420px;
-  height: 70px;
-  background-position: 0 -160px;
-  top: 15px;
-  left: 50px;
+  width: 180px;
+  height: 43px;
+  background-position: 0 -88px;
+  top: 7px;
+  left: 20px;
 }
 .sprite.cta {
-  width: 100px;
-  height: 24px;
-  background-position: 0 -230px;
-  right: 270px;
-  bottom: 14px;
+  width: 50px;
+  height: 18px;
+  background-position: 0px -130px;
+  left: 20px;
+  bottom: 7px;
 }
 .sprite.logo {
-  width: 105px;
-  height: 40px;
-  background-position: -100px -230px;
-  right: 30px;
-  top: 22px;
+  width: 55px;
+  height: 26px;
+  background-position: -62px -130px;
+  right: 0;
+  bottom: 14px;
 }
 .sprite.legal {
-  width: 50px;
-  height: 15px;
-  background-position: -217px -230px;
-  right: 27px;
-  bottom: 5px;
+  width: 35px;
+  height: 14px;
+  background-position: -120px -130px;
+  right: 0;
+  bottom: 0;
 }
 
 .cut {
@@ -180,11 +179,11 @@ figure {
 }
 .cut.bg {
   fill: #a0ed00;
-  left: 520px;
+  left: 243px;
 }
 .cut.fg {
   fill: #6f46f1;
-  left: 560px;
+  left: 255px;
 }
 .disclaimer {
   border: none;
