@@ -30,22 +30,36 @@ body {
 #ad * {
   box-sizing: border-box;
 }
-.abs {
+
+.abs,
+.visually-hidden {
   position: absolute;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 1px;
 }
 
 figure {
   margin: 0;
   padding: 0;
 }
+
 .sprite.visible,
 .visible {
   visibility: visible;
 }
+
 .hidden,
 .sprite.hidden {
   visibility: hidden;
 }
+
 .frame {
   position: absolute;
   top: 0;
@@ -55,10 +69,12 @@ figure {
   height: 100%;
   overflow: hidden;
 }
+
 .nocrisp {
   image-rendering: auto !important;
   -ms-interpolation-mode: unset;
 }
+
 #banner-frame {
   position: absolute;
   box-sizing: border-box;
@@ -66,11 +82,13 @@ figure {
   -webkit-box-sizing: border-box;
   top: 0;
   left: 0;
+  border: 1px solid #000;
   width: 100%;
   height: 100%;
   display: block;
   pointer-events: none;
 }
+
 #ad,
 #banner,
 #clickarea {
@@ -79,80 +97,163 @@ figure {
   margin: 0;
   padding: 0;
 }
+
 #banner,
 #clickarea {
   width: 100%;
   height: 100%;
 }
+
 #ad {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  background: #ffad00;
-  border: 1px solid #000;
+  background: #ffa804;
+}
+
+.disclaimer,
+.img,
+.logo {
+  z-index: 5;
+}
+
+#svgAnim #bottomCut,
+#svgAnim #middleCut,
+#svgAnim #topCut {
+  animation: circleBottomRight 1.8s ease-out forwards;
+  clip-path: circle(0 at 100% 100%);
+  will-change: transform;
+}
+
+#svgAnim.playFromBottomLeft #bottomCut,
+#svgAnim.playFromBottomLeft #middleCut,
+#svgAnim.playFromBottomLeft #topCut,
+[class$='_300x250'] #svgAnim #bottomCut,
+[class$='_300x250'] #svgAnim #middleCut,
+[class$='_300x250'] #svgAnim #topCut {
+  animation: circleBottomLeft 1.8s ease-out forwards;
+  clip-path: circle(0 at 0 100%);
+  will-change: transform;
+}
+
+#svgAnim #topCut,
+#svgAnim.playFromBottomLeft #topCut,
+[class$='_300x250'] #svgAnim #topCut {
+  animation-delay: 0s;
+}
+
+#svgAnim #middleCut,
+#svgAnim.playFromBottomLeft #middleCut,
+[class$='_300x250'] #svgAnim #middleCut {
+  animation-delay: 0.3s;
+}
+
+#svgAnim #bottomCut,
+#svgAnim.playFromBottomLeft #bottomCut,
+[class$='_300x250'] #svgAnim #bottomCut {
+  animation-delay: 0.6s;
+}
+
+@keyframes circleBottomRight {
+  0% {
+    clip-path: circle(0 at 100% 100%);
+  }
+
+  to {
+    clip-path: circle(150% at 100% 100%);
+  }
+}
+
+@keyframes circleBottomLeft {
+  0% {
+    clip-path: circle(0 at 0 100%);
+  }
+
+  to {
+    clip-path: circle(150% at 0 100%);
+  }
 }
 
 .sprite {
-  background: url(assets/sprites.png) no-repeat 0 0;
+  width: 300px;
+  height: 250px;
+  left: 0px;
+  top: 0px;
+  background-size: contain;
+  -moz-background-size: contain;
+  -webkit-background-size: contain;
+
+  /* background: url(sprite-groupa_en_v1_300x250.b1838299.png) no-repeat 0 0; */
   backface-visibility: hidden;
   image-rendering: crisp-edges;
   image-rendering: -moz-crisp-edges;
   image-rendering: -o-crisp-edges;
   image-rendering: -webkit-optimize-contrast;
   -ms-interpolation-mode: nearest-neighbor;
-  background-size: 375px 300px;
-
-  display: block;
-  z-index: 1;
 }
 
-.sprite {
-  left: 25px;
+.sprite.badge {
+  background-image: url('assets/img_badge.png');
 }
-.sprite.kv {
-  width: 100px;
-  height: 180px;
-  background-position: -247px 0;
-  bottom: 20px;
-  right: 0;
-  left: auto;
-}
+
 .sprite.copy1 {
-  width: 250px;
-  height: 75px;
-  background-position: 0 0;
-  top: 40px;
+  background-image: url('assets/img_copy1.png');
 }
+
 .sprite.copy2 {
-  width: 250px;
-  height: 105px;
-  background-position: 0 -75px;
-  top: 30px;
+  background-image: url('assets/img_copy2.png');
 }
-.sprite.copy3 {
-  width: 250px;
-  height: 80px;
-  background-position: 0 -180px;
-  top: 40px;
+
+.sprite.highlight {
+  background-image: url('assets/img_highlight.png');
 }
+
+.sprite.highlight2 {
+  background-image: url('assets/img_highlight2.png');
+}
+
 .sprite.cta {
-  width: 85px;
-  height: 25px;
-  background-position: 0 -260px;
-  bottom: 115px;
+  background-image: url('assets/img_cta.png');
 }
+
 .sprite.logo {
-  width: 80px;
-  height: 30px;
-  background-position: -90px -262px;
-  bottom: 15px;
-  left: 20px;
+  background-image: url('assets/img_logo.png');
 }
-.sprite.legal {
-  width: 80px;
-  height: 15px;
-  background-position: -170px -260px;
-  bottom: 5px;
+
+.sprite.img {
+  background-image: url('assets/img_mainImage.png');
+}
+
+.sprite.disclaimer {
+  background-image: url('assets/img_disclaimer.png');
+}
+
+.sprite.point1 {
+  background-image: url('assets/img_point1.png');
+}
+
+.sprite.point2 {
+  background-image: url('assets/img_point2.png');
+}
+
+.sprite.point3 {
+  background-image: url('assets/img_point3.png');
+}
+
+.sprite.point4 {
+  /* background-image: url("assets/img_point4.png"); */
+}
+
+#topCut {
+  fill: #a1ed00;
+}
+
+#middleCut {
+  fill: #6f46f1;
+}
+
+#bottomCut {
+  fill: #2dccd3;
 }
 
 .cut {
@@ -162,25 +263,69 @@ figure {
   transform: translate3d(0, -75%, 0);
   will-change: transform;
 }
+
 .cut svg {
   position: absolute;
   display: block;
   top: 0;
   left: 0;
 }
+
 .cut.bg {
-  fill: #a0ed00;
+  fill: #6f46f1;
   top: 163px;
 }
+
 .cut.fg {
-  fill: #6f46f1;
-  top: 193px;
+  fill: #ff0075;
+  top: 181px;
 }
+
 .disclaimer {
   border: none;
 }
+
+#legal,
 .disclaimer:focus {
   outline: none;
+}
+
+#legal {
+  overflow: visible;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 10px;
+  font-family: Arial;
+  text-align: left;
+  width: calc(100% - 24px);
+  min-height: 30px;
+  opacity: 0;
+  visibility: hidden;
+  font-family: HelveticaNeueCondensed, HelveticaNeue-Condensed, Helvetica Neue Condensed,
+    HelveticaNeueRomanCondensed, HelveticaNeue-Roman-Condensed, Helvetica Neue Roman Condensed,
+    HelveticaNeue, Helvetica Neue, HelveticaNeueRoman, HelveticaNeue-Roman, Helvetica Neue Roman,
+    Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  color: #000;
+  right: 10px;
+  bottom: 20px;
+}
+
+#legal:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: #fff transparent transparent;
+  border-style: solid;
+  border-width: 6px 5px 0;
+  bottom: -6px;
+  left: 10px;
 }
 
 img {
