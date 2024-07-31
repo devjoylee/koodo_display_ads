@@ -14,7 +14,6 @@ body {
   overflow: hidden;
   width: 300px;
   height: 250px;
-  background-color: #6c827b;
   position: relative;
   cursor: pointer;
 }
