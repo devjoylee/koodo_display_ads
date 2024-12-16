@@ -1,0 +1,105 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="ad.size" content="width=300,height=250" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.5.1_min.js"></script>
+    <script>
+      var clickTag = '';
+      function exit() {
+        window.open(window.clickTag);
+      }
+    </script>
+    <title>Koodo 320x50 HIN</title>
+  </head>
+
+  <body>
+    <div id="ad">
+      <div id="banner">
+        <a id="clickarea" href="javascript:exit()">
+          <span class="abs tag1 sprite"></span>
+          <span class="abs tag2 sprite"></span>
+          <span class="abs copy1 sprite"></span>
+          <span class="abs copy2 sprite"></span>
+          <span class="abs point1 sprite"></span>
+          <span class="abs point2 sprite"></span>
+          <span class="abs point3 sprite"></span>
+          <span class="abs happy sprite"></span>
+          <span class="abs cta sprite"></span>
+          <span class="abs legal sprite"></span>
+          <span class="abs logo sprite"></span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="320"
+            height="50"
+            viewBox="0 0 320 50"
+          >
+            <defs>
+              <clipPath id="clip-path">
+                <rect x="-25" y="167" width="320" height="50" fill="none"></rect>
+              </clipPath>
+            </defs>
+            <g
+              id="svgAnim"
+              transform="translate(25 -167)"
+              clip-path="url(#clip-path)"
+              style="isolation: isolate"
+            >
+              <path
+                id="bottomCut"
+                d="M63.139,218.434l-49.988-1.417S.056,185.088,0,121.673V1.127L24.087,0V92.148c0,46.2.916,62.512,11.718,86.476A141.1,141.1,0,0,0,63.139,218.434Z"
+                transform="matrix(0.616, -0.788, 0.788, 0.616, 115.203, 65.524)"
+                fill="#a1ed00"
+              ></path>
+              <path
+                id="topCut"
+                d="M0,252.454l95.732,22.1s17.713-56.728,17.824-131.106V2.061L80.932,0S93.88,89.227,82.5,152.9,0,252.454,0,252.454Z"
+                transform="translate(22.46 138.079) rotate(-46)"
+                fill="#2dccd3"
+              ></path>
+              <path
+                id="middleCut"
+                d="M0,264.079c.028-.023,56.438-41.924,78.038-109.893S93.751,0,93.751,0h21.712L115.2,113.564C113.376,218.389,163.86,264.572,163.891,264.6Z"
+                transform="matrix(0.616, -0.788, 0.788, 0.616, 43.032, 150.378)"
+                fill="#6f46f1"
+              ></path>
+            </g>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <script>
+      const timeline = gsap.timeline({
+        defaults: { duration: 0.4, autoAlpha: 0, ease: 'easeOutExpo' },
+      });
+
+      timeline
+        .from('.logo', { x: '8px', y: '0' }, '+=0.8')
+        .from('.tag1', { x: '12px', y: '0' })
+        .from('.copy1', { x: '12px', y: '0' }, '+=0.2')
+        .to('.copy1', 0.5, { x: '-150px' }, '+=2.5')
+
+        .from('.copy2', {}, '+=0.2')
+        .from('.legal', {}, '<=')
+        .from('.happy', {
+          scale: 0,
+          transformOrigin: '30px 40px',
+        })
+
+        .from(
+          ['.point1', '.point2', '.point3'],
+          {
+            x: '30px',
+            duration: 0.3,
+            stagger: 0.1,
+          },
+          '+=0.3'
+        )
+
+        .from('.tag2', { x: '50px', y: '0' })
+        .from('.cta', 0.2, { x: '30px' }, '+=0.5');
+    </script>
+  </body>
+</html>

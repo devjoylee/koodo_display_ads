@@ -1,145 +1,104 @@
-<!DOCTYPE html>
-<!--
-	NOTES:
-	1. All tokens are represented by '$' sign in the template.
-	2. You can write your code only wherever mentioned.
-	3. All occurrences of existing tokens will be replaced by their appropriate values.
-	4. Blank lines will be removed automatically.
-	5. Remove unnecessary comments before creating your template.
--->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="authoring-tool" content="Adobe_Animate_CC" />
     <meta name="ad.size" content="width=300,height=250" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="stylesheet" href="styles.css" />
-
     <script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.5.1_min.js"></script>
-    <script src="https://s0.2mdn.net/ads/studio/cached_libs/cssruleplugin_3.5.1_min.js"></script>
-    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
-    <script src="index.js"></script>
-    <script>
-      var canvas, stage, exportRoot, ad, overlay_container, fnStartAnimation;
-      function init() {
-        canvas = document.getElementById('canvas');
-        ad = document.getElementById('ad');
-        overlay_container = document.getElementById('overlay_container');
-        var comp = AdobeAn.getComposition('0A699BA23F964BD280A6D5329E5C089A');
-        var lib = comp.getLibrary();
-        var loader = new createjs.LoadQueue(false);
-        loader.addEventListener('fileload', function (evt) {
-          handleFileLoad(evt, comp);
-        });
-        loader.addEventListener('complete', function (evt) {
-          handleComplete(evt, comp);
-        });
-        var lib = comp.getLibrary();
-        loader.loadManifest(lib.properties.manifest);
-      }
-      function handleFileLoad(evt, comp) {
-        var images = comp.getImages();
-        if (evt && evt.item.type == 'image') {
-          images[evt.item.id] = evt.result;
-        }
-      }
-      function handleComplete(evt, comp) {
-        //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
-        var lib = comp.getLibrary();
-        var ss = comp.getSpriteSheet();
-        var queue = evt.target;
-        var ssMetadata = lib.ssMetadata;
-        for (i = 0; i < ssMetadata.length; i++) {
-          ss[ssMetadata[i].name] = new createjs.SpriteSheet({
-            images: [queue.getResult(ssMetadata[i].name)],
-            frames: ssMetadata[i].frames,
-          });
-        }
-        exportRoot = new lib.BLACK_FRIDAY_V3_GENERIC_BUNDLE__300x250();
-        stage = new lib.Stage(canvas);
-        //Registers the "tick" event listener.
-        fnStartAnimation = function () {
-          stage.addChild(exportRoot);
-          createjs.Ticker.framerate = lib.properties.fps;
-          createjs.Ticker.addEventListener('tick', stage);
-        };
-        //Code to support hidpi screens and responsive scaling.
-        AdobeAn.makeResponsive(false, 'both', false, 1, [canvas, ad, overlay_container]);
-        AdobeAn.compositionLoaded(lib.properties.id);
-        fnStartAnimation();
-      }
-    </script>
-
     <script>
       var clickTag = '';
-      var clickarea;
-
-      var domReady = function (callback) {
-        document.readyState === 'interactive' || document.readyState === 'complete'
-          ? callback()
-          : document.addEventListener('DOMContentLoaded', callback);
-      };
-
-      domReady(function () {
-        clickarea = document.querySelector('#canvas');
-        clickarea.addEventListener('click', exit);
-      });
-
       function exit() {
-        window.open(clickTag, '_blank');
+        window.open(window.clickTag);
       }
     </script>
     <title>Koodo 300x250 HIN</title>
   </head>
-  <body onload="init();" style="margin: 0px">
-    <div id="ad">
-      <canvas id="canvas"></canvas>
-      <div id="overlay_container">
-        <div id="banner">
-          <div class="frame1">
-            <span class="abs tag sprite"></span>
-            <span class="abs legal sprite"></span>
-            <span class="abs logo sprite"></span>
-            <span class="abs copy1 sprite"></span>
-            <span class="abs happy1 sprite"></span>
-          </div>
 
-          <div class="frame2">
-            <span class="abs copy2 sprite"></span>
-            <span class="abs happy2 sprite"></span>
-            <span class="abs op1 sprite"></span>
-            <span class="abs op2 sprite"></span>
-            <span class="abs op3 sprite"></span>
-            <span class="abs cta sprite"></span>
-          </div>
-        </div>
+  <body>
+    <div id="ad">
+      <div id="banner">
+        <a id="clickarea" href="javascript:exit()">
+          <span class="abs tag1 sprite"></span>
+          <span class="abs tag2 sprite"></span>
+          <span class="abs copy1 sprite"></span>
+          <span class="abs copy2 sprite"></span>
+          <span class="abs point1 sprite"></span>
+          <span class="abs point2 sprite"></span>
+          <span class="abs point3 sprite"></span>
+          <span class="abs happy sprite"></span>
+          <span class="abs cta sprite"></span>
+          <span class="abs legal sprite"></span>
+          <span class="abs logo sprite"></span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="300"
+            height="250"
+            viewBox="0 0 300 250"
+          >
+            <defs>
+              <clipPath id="clip-path">
+                <rect x="93" y="244" width="300" height="250" fill="none"></rect>
+              </clipPath>
+            </defs>
+            <g
+              id="svgAnim"
+              transform="translate(-93 -244)"
+              clip-path="url(#clip-path)"
+              style="isolation: isolate"
+            >
+              <path
+                id="bottomCut"
+                d="M4362.648,2207.311l-211.495-4.171s-55.406-94.006-55.642-280.709c0-1.513,0-80.647,0-82.077V1567.522l101.909-3.317v271.3c0,136.029,3.875,184.046,49.578,254.6S4362.648,2207.311,4362.648,2207.311Z"
+                transform="matrix(0.602, 0.799, -0.799, 0.602, -563.277, -4029.465)"
+                fill="#7a3dfa"
+              ></path>
+              <path
+                id="topCut"
+                d="M4108.51,2203.14h169.758s55.407-94.006,55.642-280.709c0-1.513,0-80.647,0-82.077V1567.522h-39.9v271.3c0,136.029-5.276,184.243-50.978,254.795S4108.51,2203.14,4108.51,2203.14Z"
+                transform="matrix(0.602, 0.799, -0.799, 0.602, -706.329, -4219.302)"
+                fill="#ff0076"
+              ></path>
+              <path
+                id="middleCut"
+                d="M159.007,644.361c.042-.055,31.959-59.665,36.078-70.351a519.775,519.775,0,0,0,24.868-87.755c3.572-18.424,11.4-100.381,11.44-122.644,0-.518,0-82.089,0-82.089L231.778,8.7h32.279l-.386,272.826c0,70.623,0,81.571,0,82.089.037,22.263,7.868,104.221,11.44,122.644a519.781,519.781,0,0,0,24.868,87.755c4.12,10.687,36.033,70.292,36.078,70.351Z"
+                transform="matrix(0.602, 0.799, -0.799, 0.602, 507.191, -4.774)"
+                fill="#08cbd1"
+              ></path>
+            </g>
+          </svg>
+        </a>
       </div>
     </div>
-
     <script>
       const timeline = gsap.timeline({
         defaults: { duration: 0.4, autoAlpha: 0, ease: 'easeOutExpo' },
       });
 
       timeline
-        .from('.logo', { x: '8px', y: '0' }, '+=0.9')
-        .from('.tag', { x: '12px', y: '0' })
-        .from('.copy1', { x: '12px', y: '0' }, '+=0.4')
-        .from('.happy1', {
-          scale: 0,
-          transformOrigin: '105px 145px',
-        })
-        .to(['.copy1', '.happy1'], 0.5, { x: '-150px' }, '+=2.5')
+        .from('.logo', { x: '8px', y: '0' }, '+=0.8')
+        .from('.tag1', { x: '12px', y: '0' })
+        .from('.copy1', { x: '12px', y: '0' }, '+=0.2')
+        .to('.copy1', 0.5, { x: '-150px' }, '+=2.5')
+
         .from('.copy2', {}, '+=0.2')
         .from('.legal', {}, '<=')
-        .from('.happy2', {
+        .from('.happy', {
           scale: 0,
-          transformOrigin: '130px 80px',
+          transformOrigin: '160px 65px',
         })
-        .from('.op1', 0.2, { x: '30px' }, '+=0.3')
-        .from('.op2', 0.2, { x: '30px' })
-        .from('.op3', 0.2, { x: '30px' })
+
+        .from(
+          ['.point1', '.point2', '.point3'],
+          {
+            x: '30px',
+            duration: 0.3,
+            stagger: 0.1,
+          },
+          '+=0.3'
+        )
+
+        .from('.tag2', { x: '50px', y: '0' })
         .from('.cta', 0.2, { x: '30px' }, '+=0.5');
     </script>
   </body>

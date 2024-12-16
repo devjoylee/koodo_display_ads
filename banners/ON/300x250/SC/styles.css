@@ -9,37 +9,17 @@ body {
   padding: 0;
 }
 
-#ad,
-#canvas,
-#overlay_container {
-  width: 300px;
-  height: 250px;
-}
-
-#canvas {
-  position: absolute;
-  display: block;
-  background-color: #000;
-  border: 1px solid #000;
-}
-
-#overlay_container {
-  pointer-events: none;
-  overflow: hidden;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  display: block;
-}
-
 #ad {
   display: block;
   overflow: hidden;
+  width: 300px;
+  height: 250px;
   position: relative;
   cursor: pointer;
 }
 
-#banner {
+#banner,
+.frame {
   width: 100%;
   height: 100%;
   z-index: 100;
@@ -50,8 +30,23 @@ body {
   box-sizing: border-box;
 }
 
-.abs {
+.abs,
+.visually-hidden {
   position: absolute;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 1px;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
 }
 
 .sprite.visible,
@@ -79,10 +74,103 @@ body {
   -ms-interpolation-mode: unset;
 }
 
-.disclaimer,
-.img,
+#banner-frame {
+  position: absolute;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  top: 0;
+  left: 0;
+  border: 1px solid #000;
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+}
+
+#ad,
+#banner,
+#clickarea {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+#banner,
+#clickarea {
+  width: 100%;
+  height: 100%;
+}
+
+#ad {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background: #7a3dfc;
+}
+
+.legal,
+.tag2,
 .logo {
   z-index: 5;
+}
+
+#svgAnim #bottomCut,
+#svgAnim #middleCut,
+#svgAnim #topCut {
+  animation: circleBottomRight 1.8s ease-out forwards;
+  clip-path: circle(0 at 100% 100%);
+  will-change: transform;
+}
+
+#svgAnim.playFromBottomLeft #bottomCut,
+#svgAnim.playFromBottomLeft #middleCut,
+#svgAnim.playFromBottomLeft #topCut,
+[class$='_300x250'] #svgAnim #bottomCut,
+[class$='_300x250'] #svgAnim #middleCut,
+[class$='_300x250'] #svgAnim #topCut {
+  animation: circleBottomLeft 1.5s ease-out forwards;
+  clip-path: circle(0 at 0 100%);
+  will-change: transform;
+}
+
+#svgAnim #topCut,
+#svgAnim.playFromBottomLeft #topCut,
+[class$='_300x250'] #svgAnim #topCut {
+  animation-delay: 0s;
+}
+
+#svgAnim #middleCut,
+#svgAnim.playFromBottomLeft #middleCut,
+[class$='_300x250'] #svgAnim #middleCut {
+  animation-delay: 0.2s;
+}
+
+#svgAnim #bottomCut,
+#svgAnim.playFromBottomLeft #bottomCut,
+[class$='_300x250'] #svgAnim #bottomCut {
+  animation-delay: 0.4s;
+}
+
+@keyframes circleBottomRight {
+  0% {
+    clip-path: circle(0 at 100% 100%);
+  }
+
+  to {
+    clip-path: circle(150% at 100% 100%);
+  }
+}
+
+@keyframes circleBottomLeft {
+  0% {
+    clip-path: circle(0 at 0 100%);
+  }
+
+  to {
+    clip-path: circle(150% at 0 100%);
+  }
 }
 
 .sprite {
@@ -103,24 +191,20 @@ body {
   -ms-interpolation-mode: nearest-neighbor;
 }
 
-.sprite.tag {
-  background-image: url('assets/bf_tag.png');
+.sprite.tag1 {
+  background-image: url('assets/tag1.png');
 }
 
 .sprite.copy1 {
   background-image: url('assets/copy1.png');
 }
 
-.sprite.happy1 {
-  background-image: url('assets/happy1.png');
-}
-
 .sprite.copy2 {
   background-image: url('assets/copy2.png');
 }
 
-.sprite.happy2 {
-  background-image: url('assets/happy2.png');
+.sprite.happy {
+  background-image: url('assets/happy.png');
 }
 
 .sprite.cta {
@@ -131,67 +215,61 @@ body {
   background-image: url('assets/logo.png');
 }
 
+.sprite.tag2 {
+  background-image: url('assets/tag2.png');
+}
+
 .sprite.legal {
   background-image: url('assets/legal.png');
 }
 
-.sprite.op1 {
-  background-image: url('assets/op1.png');
+.sprite.point1 {
+  background-image: url('assets/point1.png');
 }
 
-.sprite.op2 {
-  background-image: url('assets/op2.png');
+.sprite.point2 {
+  background-image: url('assets/point2.png');
 }
 
-.sprite.op3 {
-  background-image: url('assets/op3.png');
+.sprite.point3 {
+  background-image: url('assets/point3.png');
 }
 
-.disclaimer {
-  border: none;
+#topCut {
+  fill: #02dcd3;
 }
 
-#legal,
-.disclaimer:focus {
-  outline: none;
+#middleCut {
+  fill: #ff0076;
 }
 
-#legal {
-  overflow: visible;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
-  padding: 10px;
-  font-family: Arial;
-  text-align: left;
-  width: calc(100% - 24px);
-  min-height: 30px;
-  opacity: 0;
-  visibility: hidden;
-  font-family: HelveticaNeueCondensed, HelveticaNeue-Condensed, Helvetica Neue Condensed,
-    HelveticaNeueRomanCondensed, HelveticaNeue-Roman-Condensed, Helvetica Neue Roman Condensed,
-    HelveticaNeue, Helvetica Neue, HelveticaNeueRoman, HelveticaNeue-Roman, Helvetica Neue Roman,
-    Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 10px;
-  color: #000;
-  right: 10px;
-  bottom: 20px;
+#bottomCut {
+  fill: #a1ed00;
 }
 
-#legal:after {
-  content: '';
-  display: block;
+.cut {
+  left: 0;
+  width: 100%;
+  height: 200%;
+  transform: translate3d(0, -75%, 0);
+  will-change: transform;
+}
+
+.cut svg {
   position: absolute;
-  width: 0;
-  height: 0;
-  border-color: #fff transparent transparent;
-  border-style: solid;
-  border-width: 6px 5px 0;
-  bottom: -6px;
-  left: 10px;
+  display: block;
+  top: 0;
+  left: 0;
+}
+
+.cut.bg {
+  fill: #6f46f1;
+  top: 163px;
+}
+
+.cut.fg {
+  fill: #ff0075;
+  top: 181px;
 }
 
 img {
