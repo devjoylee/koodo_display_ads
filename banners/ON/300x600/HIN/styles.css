@@ -204,8 +204,11 @@ figure {
   background-image: url('assets/copy2.png');
 }
 
-.sprite.happy {
-  background-image: url('assets/happy.png');
+.sprite.happy1 {
+  background-image: url('assets/happy1.png');
+}
+.sprite.happy2 {
+  background-image: url('assets/happy2.png');
 }
 
 .sprite.cta {

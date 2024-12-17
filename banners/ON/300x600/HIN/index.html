@@ -25,7 +25,8 @@
           <span class="abs point1 sprite"></span>
           <span class="abs point2 sprite"></span>
           <span class="abs point3 sprite"></span>
-          <span class="abs happy sprite"></span>
+          <span class="abs happy1 sprite"></span>
+          <span class="abs happy2 sprite"></span>
           <span class="abs cta sprite"></span>
           <span class="abs legal sprite"></span>
           <span class="abs logo sprite"></span>
@@ -76,13 +77,17 @@
         .from('.logo', { x: '8px', y: '0' }, '+=1')
         .from('.tag1', { x: '12px', y: '0' })
         .from('.copy1', { x: '12px', y: '0' }, '+=0.2')
-        .to('.copy1', 0.5, { x: '-150px' }, '+=2.5')
+        .from('.happy1', {
+          scale: 0,
+          transformOrigin: '90px 280px',
+        })
+        .to(['.copy1', '.happy1'], 0.5, { x: '-150px' }, '+=2.5')
 
         .from('.copy2', {}, '+=0.2')
         .from('.legal', {}, '<=')
-        .from('.happy', {
+        .from('.happy2', {
           scale: 0,
-          transformOrigin: '80px 155px',
+          transformOrigin: '110px 180px',
         })
 
         .from(
