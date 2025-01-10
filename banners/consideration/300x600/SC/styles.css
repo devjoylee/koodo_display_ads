@@ -147,7 +147,7 @@ figure {
   width: 300px;
   height: 155px;
   background-position: -315px 0;
-  bottom: 85px;
+  bottom: 100px;
   right: -45px;
 }
 
@@ -159,10 +159,10 @@ figure {
 }
 
 .shadow {
-  width: 350px;
-  bottom: 56px;
+  width: 395px;
+  bottom: 61px;
   z-index: 1;
-  right: -74px;
+  right: -102px;
 }
 
 .sprite.cta {
