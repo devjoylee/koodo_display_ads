@@ -21,8 +21,8 @@
           <span class="abs copy copy2 sprite"></span>
           <span class="abs copy copy3 sprite"></span>
           <span class="abs kv kv1 sprite"></span>
-          <span class="abs kv kv2 sprite"></span>
-          <span class="abs kv kv3 sprite"></span>
+          <img src="assets/shadow.png" alt="snake" class="abs shadow img" />
+          <img src="assets/snake.gif" alt="snake" class="abs snake img" />
           <span class="abs cta sprite"></span>
           <span class="abs logo sprite"></span>
           <svg class="abs bg cut"><polygon points="0,50 0,0 640,0 640,50"></polygon></svg>
@@ -176,7 +176,7 @@
                     e.addEventListener('mouseout', hideLegals);
                 },
                 animate = function () {
-                  var e = (0, _utils.getElements)('.sprite, .cut, .legal'),
+                  var e = (0, _utils.getElements)('.sprite, .cut, .legal, .img'),
                     a = new TimelineMax({ paused: !0 });
                   a.delay(0.15)
                     .to(e.fg, 0.6, { x: 0, ease: 'easeOutCirc' })
@@ -209,7 +209,12 @@
                       { autoAlpha: 0, x: '-30px', y: 0, ease: 'easeOutExpo' },
                       '-=0.3'
                     )
-                    .from(e.kv2, 0.6, { autoAlpha: 0, scale: 0, ease: 'easeOutBack' }, '-=0.6')
+                    .from(
+                      [e.snake, e.shadow],
+                      0.6,
+                      { autoAlpha: 0, scale: 0, ease: 'easeOutBack' },
+                      '-=0.6'
+                    )
                     .addLabel('readTimeDelay', readTimeValue)
                     .to(e.copy2, 0.6, { autoAlpha: 0, ease: 'easeOutExpo' }, 'readTimeDelay')
                     .from(
@@ -218,7 +223,6 @@
                       { autoAlpha: 0, x: '-30px', y: 0, ease: 'easeOutExpo' },
                       '-=0.3'
                     )
-                    .from(e.kv3, 0.6, { autoAlpha: 0 }, '-=0.6')
                     .from(e.cta, 0.6, { autoAlpha: 0, x: 0, y: '30px', ease: 'easeOutExpo' })
                     .addLabel('readTimeDelay', readTimeValue);
                   a.play();

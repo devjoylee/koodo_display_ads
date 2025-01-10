@@ -127,7 +127,7 @@ figure {
 
 .sprite.copy2 {
   width: 270px;
-  height: 200px;
+  height: 150px;
   background-position: 0px -120px;
   top: 70px;
 }
@@ -135,7 +135,7 @@ figure {
 .sprite.copy3 {
   width: 270px;
   height: 150px;
-  background-position: 0px -320px;
+  background-position: 0px -272px;
   top: 70px;
 }
 
@@ -148,30 +148,27 @@ figure {
   height: 155px;
   background-position: -315px 0;
   bottom: 85px;
-}
-
-.sprite.kv2 {
-  width: 290px;
-  height: 188px;
-  background-position: -359px -175px;
-  bottom: 58px;
-}
-
-.sprite.kv3 {
-  width: 291px;
-  height: 188px;
-  background-position: -359px -363px;
-  bottom: 58px;
-}
-
-.kv {
   right: -45px;
+}
+
+.snake {
+  width: 257px;
+  bottom: 70px;
+  right: -13px;
+  z-index: 1;
+}
+
+.shadow {
+  width: 350px;
+  bottom: 56px;
+  z-index: 1;
+  right: -74px;
 }
 
 .sprite.cta {
   width: 90px;
   height: 30px;
-  background-position: 0 -520px;
+  background-position: 0 -440px;
   top: 240px;
 }
 
@@ -253,6 +250,5 @@ img {
   -ms-user-select: none;
   user-select: none;
   -webkit-user-drag: none;
-  user-drag: none;
   -webkit-touch-callout: none;
 }

@@ -148,24 +148,21 @@ figure {
   height: 100px;
   background-position: -215px 0;
   bottom: 15px;
-}
-
-.sprite.kv2 {
-  width: 215px;
-  height: 125px;
-  background-position: -250px -115px;
-  bottom: -10px;
-}
-
-.sprite.kv3 {
-  width: 215px;
-  height: 125px;
-  background-position: -250px -242px;
-  bottom: -11px;
-}
-
-.kv {
   right: -54px;
+}
+
+.snake {
+  width: 165px;
+  bottom: 0;
+  right: 4px;
+  z-index: 1;
+}
+
+.shadow {
+  width: 250px;
+  bottom: -12px;
+  z-index: 1;
+  right: -55px;
 }
 
 .sprite.cta {
@@ -253,6 +250,5 @@ img {
   -ms-user-select: none;
   user-select: none;
   -webkit-user-drag: none;
-  user-drag: none;
   -webkit-touch-callout: none;
 }
