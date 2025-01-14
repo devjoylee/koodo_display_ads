@@ -127,7 +127,7 @@ figure {
 
 .sprite.copy2 {
   width: 270px;
-  height: 150px;
+  height: 200px;
   background-position: 0px -120px;
   top: 70px;
 }
@@ -135,7 +135,7 @@ figure {
 .sprite.copy3 {
   width: 270px;
   height: 150px;
-  background-position: 0px -272px;
+  background-position: 0px -318px;
   top: 70px;
 }
 

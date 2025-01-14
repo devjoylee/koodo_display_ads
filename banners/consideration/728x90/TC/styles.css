@@ -126,7 +126,7 @@ figure {
 }
 
 .sprite.copy2 {
-  width: 400px;
+  width: 455px;
   height: 30px;
   background-position: 0 -34px;
   top: 28px;
@@ -140,7 +140,7 @@ figure {
 }
 
 .copy {
-  left: 20px;
+  left: 15px;
 }
 
 .sprite.kv1 {

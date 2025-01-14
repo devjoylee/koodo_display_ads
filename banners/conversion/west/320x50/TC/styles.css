@@ -12,8 +12,8 @@ body {
 #ad {
   display: block;
   overflow: hidden;
-  width: 300px;
-  height: 250px;
+  width: 320px;
+  height: 50px;
   border: 1px solid #000;
   position: relative;
   cursor: pointer;
@@ -25,7 +25,6 @@ body {
   height: 100%;
   z-index: 100;
 }
-
 #ad,
 #ad * {
   box-sizing: border-box;
@@ -102,7 +101,8 @@ figure {
 .copy,
 .kv,
 .cta,
-.logo {
+.logo,
+.legal {
   z-index: 1;
 }
 
@@ -114,85 +114,89 @@ figure {
   image-rendering: -o-crisp-edges;
   image-rendering: -webkit-optimize-contrast;
   -ms-interpolation-mode: nearest-neighbor;
-  background-size: 450px 235px;
+  background-size: 230px 140px;
   display: block;
 }
 
 .sprite.copy1 {
-  width: 270px;
-  height: 70px;
+  width: 128px;
+  height: 35px;
   background-position: 0 0;
-  top: 35px;
+  top: 8px;
+  left: 12px;
 }
 
 .sprite.copy2 {
-  width: 190px;
-  height: 116px;
-  background-position: 0 -73px;
-  top: 10px;
-}
-
-.copy {
-  left: 15px;
+  width: 178px;
+  height: 30px;
+  background-position: 0 -36px;
+  top: 9px;
+  left: 7px;
 }
 
 .sprite.kv1 {
-  width: 140px;
-  height: 100px;
-  background-position: -280px 0;
-  bottom: 25px;
-  right: 5px;
+  width: 80px;
+  height: 45px;
+  background-position: -59px -82px;
+  bottom: 0;
+  right: 50px;
 }
 
 .sprite.kv2 {
-  width: 170px;
-  height: 125px;
-  background-position: -265px -110px;
-  bottom: -10px;
-  right: 0;
+  width: 90px;
+  height: 45px;
+  background-position: -135px -82px;
+  bottom: 0;
+  right: 34px;
 }
 
 .sprite.cta {
-  width: 63px;
-  height: 18px;
-  background-position: 0 -203px;
-  top: 130px;
+  width: 40px;
+  height: 12px;
+  background-position: 0 -91px;
+  bottom: 8px;
+  left: 158px;
 }
 
 .sprite.logo {
-  width: 80px;
-  height: 30px;
-  background-position: -75px -200px;
-  bottom: 20px;
+  width: 42px;
+  height: 20px;
+  background-position: 0 -113px;
+  bottom: 17px;
+  right: 15px;
 }
 
 .sprite.legal {
-  width: 30px;
-  height: 12px;
-  background-position: 0 -225px;
+  width: 26px;
+  height: 7px;
+  background-position: 0 -104px;
   bottom: 7px;
+  right: 13px;
 }
 
 .cut {
-  left: 0;
-  width: 100%;
-  height: 200%;
-  transform: translate3d(0, -75%, 0);
+  width: 200%;
+  transform: translate3d(-50%, 0, 0);
   will-change: transform;
+}
+.cut,
+.cut svg {
+  top: 0;
+  height: 100%;
 }
 .cut svg {
   position: absolute;
   display: block;
-  top: 0;
+  width: 100%;
   left: 0;
 }
 .cut.bg {
   fill: #a0ed00;
-  top: 155px;
+  left: 220px;
 }
 .cut.fg {
   fill: #f2af3e;
-  top: 175px;
+  left: 240px;
 }
 img {
   -moz-user-select: none;

@@ -13,7 +13,7 @@ body {
   display: block;
   overflow: hidden;
   width: 300px;
-  height: 250px;
+  height: 600px;
   border: 1px solid #000;
   position: relative;
   cursor: pointer;
@@ -114,63 +114,63 @@ figure {
   image-rendering: -o-crisp-edges;
   image-rendering: -webkit-optimize-contrast;
   -ms-interpolation-mode: nearest-neighbor;
-  background-size: 450px 235px;
+  background-size: 650px 451px;
   display: block;
 }
 
 .sprite.copy1 {
-  width: 270px;
-  height: 70px;
+  width: 265px;
+  height: 135px;
   background-position: 0 0;
-  top: 35px;
+  top: 120px;
 }
 
 .sprite.copy2 {
-  width: 190px;
-  height: 116px;
-  background-position: 0 -73px;
-  top: 10px;
+  width: 260px;
+  height: 160px;
+  background-position: 0px -136px;
+  top: 100px;
 }
 
 .copy {
-  left: 15px;
+  left: 17px;
 }
 
 .sprite.kv1 {
-  width: 140px;
-  height: 100px;
-  background-position: -280px 0;
-  bottom: 25px;
-  right: 5px;
+  width: 300px;
+  height: 200px;
+  background-position: -315px 0;
+  bottom: 85px;
+  right: -45px;
 }
 
 .sprite.kv2 {
-  width: 170px;
-  height: 125px;
-  background-position: -265px -110px;
-  bottom: -10px;
-  right: 0;
+  width: 308px;
+  height: 240px;
+  background-position: -315px -210px;
+  bottom: 4px;
+  right: -60px;
 }
 
 .sprite.cta {
-  width: 63px;
-  height: 18px;
-  background-position: 0 -203px;
-  top: 130px;
+  width: 90px;
+  height: 30px;
+  background-position: 0 -323px;
+  top: 290px;
 }
 
 .sprite.logo {
-  width: 80px;
-  height: 30px;
-  background-position: -75px -200px;
-  bottom: 20px;
+  width: 100px;
+  height: 40px;
+  background-position: 0 -370px;
+  bottom: 45px;
 }
 
 .sprite.legal {
-  width: 30px;
+  width: 60px;
   height: 12px;
-  background-position: 0 -225px;
-  bottom: 7px;
+  background-position: 0 -357px;
+  bottom: 10px;
 }
 
 .cut {
@@ -188,12 +188,13 @@ figure {
 }
 .cut.bg {
   fill: #a0ed00;
-  top: 155px;
+  top: 390px;
 }
 .cut.fg {
   fill: #f2af3e;
-  top: 175px;
+  top: 460px;
 }
+
 img {
   -moz-user-select: none;
   -webkit-user-select: none;
